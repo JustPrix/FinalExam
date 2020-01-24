@@ -10,12 +10,29 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var dbLocation = ""
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let dirs = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        self.dbLocation = dirs + "/FinalExamDB.db"
+        
+        if !(FileManager.default.fileExists(atPath: self.dbLocation)) {
+            let getPath = Bundle.main.path(forResource: "FinalExamDB", ofType: "db")
+            do{
+                try FileManager.default.copyItem(atPath: getPath!, toPath: self.dbLocation)
+            }
+            catch (let err as NSError){
+                print("Error \(err.localizedDescription)")
+            }
+        }
+        print(dbLocation)
+
         return true
     }
 

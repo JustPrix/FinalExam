@@ -12,6 +12,12 @@
 		D133054F23DABF0600B68A16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D133054D23DABF0600B68A16 /* Main.storyboard */; };
 		D133055123DABF0600B68A16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D133055023DABF0600B68A16 /* Assets.xcassets */; };
 		D133055423DABF0600B68A16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D133055223DABF0600B68A16 /* LaunchScreen.storyboard */; };
+		D133055D23DAC02000B68A16 /* FinalExamDB.db in Resources */ = {isa = PBXBuildFile; fileRef = D133055C23DAC02000B68A16 /* FinalExamDB.db */; };
+		D133056023DAC06500B68A16 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D133055F23DAC06500B68A16 /* libsqlite3.0.tbd */; };
+		D133056523DAC0D500B68A16 /* ManageDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D133056423DAC0D500B68A16 /* ManageDB.swift */; };
+		D133056723DAC56100B68A16 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D133056623DAC56100B68A16 /* LoginViewController.swift */; };
+		D133056923DAC56E00B68A16 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D133056823DAC56E00B68A16 /* RegisterViewController.swift */; };
+		D133056B23DAC57C00B68A16 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D133056A23DAC57C00B68A16 /* EditProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,13 @@
 		D133055023DABF0600B68A16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D133055323DABF0600B68A16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D133055523DABF0600B68A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D133055C23DAC02000B68A16 /* FinalExamDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = FinalExamDB.db; path = ../../../../../FinalExamDB.db; sourceTree = "<group>"; };
+		D133055F23DAC06500B68A16 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		D133056123DAC07300B68A16 /* FinalExamProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinalExamProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		D133056423DAC0D500B68A16 /* ManageDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageDB.swift; sourceTree = "<group>"; };
+		D133056623DAC56100B68A16 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D133056823DAC56E00B68A16 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D133056A23DAC57C00B68A16 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D133056023DAC06500B68A16 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +54,7 @@
 			children = (
 				D133054823DABF0600B68A16 /* FinalExamProject */,
 				D133054723DABF0600B68A16 /* Products */,
+				D133055E23DAC06500B68A16 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +69,36 @@
 		D133054823DABF0600B68A16 /* FinalExamProject */ = {
 			isa = PBXGroup;
 			children = (
+				D133055B23DABFF300B68A16 /* dB */,
 				D133054923DABF0600B68A16 /* AppDelegate.swift */,
 				D133054B23DABF0600B68A16 /* ViewController.swift */,
 				D133054D23DABF0600B68A16 /* Main.storyboard */,
 				D133055023DABF0600B68A16 /* Assets.xcassets */,
 				D133055223DABF0600B68A16 /* LaunchScreen.storyboard */,
 				D133055523DABF0600B68A16 /* Info.plist */,
+				D133056623DAC56100B68A16 /* LoginViewController.swift */,
+				D133056823DAC56E00B68A16 /* RegisterViewController.swift */,
+				D133056A23DAC57C00B68A16 /* EditProfileViewController.swift */,
 			);
 			path = FinalExamProject;
+			sourceTree = "<group>";
+		};
+		D133055B23DABFF300B68A16 /* dB */ = {
+			isa = PBXGroup;
+			children = (
+				D133055C23DAC02000B68A16 /* FinalExamDB.db */,
+				D133056123DAC07300B68A16 /* FinalExamProject-Bridging-Header.h */,
+				D133056423DAC0D500B68A16 /* ManageDB.swift */,
+			);
+			path = dB;
+			sourceTree = "<group>";
+		};
+		D133055E23DAC06500B68A16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D133055F23DAC06500B68A16 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +133,7 @@
 				TargetAttributes = {
 					D133054523DABF0600B68A16 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D133055423DABF0600B68A16 /* LaunchScreen.storyboard in Resources */,
+				D133055D23DAC02000B68A16 /* FinalExamDB.db in Resources */,
 				D133055123DABF0600B68A16 /* Assets.xcassets in Resources */,
 				D133054F23DABF0600B68A16 /* Main.storyboard in Resources */,
 			);
@@ -136,7 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D133056723DAC56100B68A16 /* LoginViewController.swift in Sources */,
+				D133056923DAC56E00B68A16 /* RegisterViewController.swift in Sources */,
+				D133056B23DAC57C00B68A16 /* EditProfileViewController.swift in Sources */,
 				D133054C23DABF0600B68A16 /* ViewController.swift in Sources */,
+				D133056523DAC0D500B68A16 /* ManageDB.swift in Sources */,
 				D133054A23DABF0600B68A16 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,12 +317,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WXSDPVT397;
 				INFOPLIST_FILE = FinalExamProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bgkv.FinalExamProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FinalExamProject/dB/FinalExamProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,12 +335,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WXSDPVT397;
 				INFOPLIST_FILE = FinalExamProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bgkv.FinalExamProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FinalExamProject/dB/FinalExamProject-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
