@@ -35,7 +35,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     }
     
     func saveSalesman(){
-        let cmdText = "Insert into Salesman(sname,deptname) values('\(txtFldName.text!)','\(txtFldDepartment.text)')"
+        let cmdText = "Insert into Salesman(sname,deptname) values('\(txtFldName.text!)','\(txtFldDepartment.text!)')"
         
         if (dbObj.ExecCommand(with: cmdText)) {
             print("\n\n\tExecuted!")
